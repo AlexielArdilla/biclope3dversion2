@@ -10,7 +10,8 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #fff;
+  background-color: #1f1f1e;
 }
 
 a {
@@ -45,13 +46,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #5846f9;
+  background: #160b72;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #7b27d8;
+  background: #330d5f;
   color: #fff;
 }
 
@@ -74,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #5846f9;
+  border: 6px solid #1607a0;
   border-top-color: #e7e4fe;
   border-radius: 50%;
   width: 60px;
@@ -120,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled, #header.header-inner-pages {
-  background: rgba(24, 6, 185, 0.8);
+  background: rgba(14, 5, 100, 0.8);
   padding: 12px 0;
 }
 
@@ -237,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #5846f9;
+  color: #250fee;
 }
 
 .nav-menu .drop-down > a:after {
@@ -358,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #5846f9;
+  color: #1f09ee;
   text-decoration: none;
 }
 
@@ -419,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
+  background: linear-gradient(45deg, rgba(10, 2, 51, 0.9) 0%, rgba(6, 50, 75, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -536,7 +537,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f9f8ff;
+  background-color: #1d0d79;
 }
 
 .section-title {
@@ -578,7 +579,7 @@ section {
 .about .content h3 {
   font-weight: 600;
   font-size: 32px;
-  color: #2c4964;
+  color: #dcdee0;
 }
 
 .about .content ul {
@@ -593,7 +594,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #5846f9;
+  color: #dcdee0;
 }
 
 .about .content p:last-child {
@@ -610,12 +611,12 @@ section {
   border-radius: 5px;
   transition: 0.5s;
   color: #fff;
-  background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%);
+  background: rgb(1, 1, 41);
   position: relative;
 }
 
 .about .content .read-more:hover {
-  background: linear-gradient(180deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(180deg, #200ae0 0%, #160e7e 100%);
 }
 
 .about .content .read-more i {
@@ -830,7 +831,7 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
-  color: #2c4964;
+  color: #5daaf1;
 }
 
 .testimonials .testimonial-item h4 {
@@ -840,7 +841,7 @@ section {
 }
 
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-  color: #b1a9fc;
+  color: #0b0444;
   font-size: 26px;
 }
 
@@ -861,6 +862,7 @@ section {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
+  color: black;
   background: #fff;
   position: relative;
   border-radius: 6px;
@@ -917,7 +919,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #444444;
+  color: #f7f7f7;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
@@ -1020,6 +1022,11 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
+.pricing{
+
+  background-color: black;
+}
+
 .pricing .box {
   padding: 20px;
   background: #fff;
@@ -1131,11 +1138,16 @@ section {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 .faq {
-  background: linear-gradient(42deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(42deg, #070230 0%, #190331 100%);
 }
 
-.faq .section-title h2, .faq .section-title p {
+.faq .section-title h2, .faq .section-title {
   color: #fff;
+}
+
+.faq p {
+
+  color: #070230;
 }
 
 .faq .section-title h2::after {
@@ -1493,7 +1505,7 @@ section {
 #footer {
   color: #fff;
   font-size: 14px;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
+  background: linear-gradient(45deg, rgba(6, 2, 32, 0.9) 0%, rgba(26, 4, 49, 0.9) 100%), url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -1630,7 +1642,7 @@ section {
 }
 
 #footer .social-links a {
-  font-size: 18px;
+  font-size: 35px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
@@ -1639,8 +1651,8 @@ section {
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 56px;
+  height: 56px;
   transition: 0.3s;
 }
 
@@ -1649,3 +1661,4 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
