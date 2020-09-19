@@ -1,0 +1,29 @@
+body{
+
+    background-color: black;
+    color: cornsilk;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+h4{
+
+    color: yellowgreen;
+}
+
+h1{
+    background-color: brown;
+    padding: 5px;
+    margin: auto;
+    color: whitesmoke;
+    margin: 5px;
+    border-radius: 15px;
+    padding: 10px 10px;
+    
+}
+
+#volver{
+
+    color: darkorange;
+
+}
