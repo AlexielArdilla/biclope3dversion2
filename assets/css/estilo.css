@@ -11,7 +11,7 @@ body{
 
 h4{
 
-    color: rgb(86, 197, 21);
+    color: rgb(105, 106, 209);
 }
 
 h1{
@@ -22,11 +22,19 @@ h1{
     margin: 5px;
     border-radius: 5px;
     padding: 10px 10px;
+    width: 100%;
     
 }
 
 #volver{
 
     color: rgb(46, 189, 33);
+
+}
+
+.nav{
+
+color: azure !important;
+background-color: rgb(10, 10, 68);
 
 }

@@ -7,13 +7,33 @@
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel=StyleSheet href="assets/css/estilo.css" type="text/css">
+    <link rel=StyleSheet href="assets/css/estilo.css" type="text/css">
     <title>Buscador Coleccionables</title>
 </head>
 
 <body>
+    <header>
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="navbar-brand" href="index.html">El buscador de Bíclope 3D</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#hero">nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#contact">contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/biclope_3d/" target="_blank">Instagram</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">volver</a>
+            </li>
+        </ul>
+    </header>
     <div class="container mt-5">
-        <h1>El buscador de Bíclope 3D: <a id="volver" href="index.html">(VOLVER?)</a></h1>
+        <!--<h1>El buscador de Bíclope 3D: <a id="volver" href="index.html">(VOLVER?)</a></h1>-->
         <input type="text" id="formulario" class="form-control my-2">
         <h4>Buscá por palabra clave: Ej: si querés "Bob esponja", busca "bob" o "esponja".</h4><br>
         <div class="row portfolio-container" id="resultado">
@@ -21,86 +41,86 @@
         </div>
     </div><br><br>
 
-    
+
 
     <script>
 
         const productos = [
-            { nombre: 'bob_esponja_taza', carpeta: 'tazas',catalogoID: 1 },
-            { nombre: 'boca_juniors_taza', carpeta: 'tazas' ,catalogoID: 2},
-            { nombre: 'capitan_america',carpeta: 'tazas',catalogoID: 3 },
-            { nombre: 'chuky_taza',carpeta: 'tazas',catalogoID: 4 },
-            { nombre: 'deadpool',carpeta: 'tazas',catalogoID: 5 },
-            { nombre: 'esfera_del_dragon_taza',carpeta: 'tazas' ,catalogoID: 6},
-            { nombre: 'feminista',carpeta: 'tazas',catalogoID: 7 },
-            { nombre: 'gauchito_taza',carpeta: 'tazas',catalogoID: 8 },
-            { nombre: 'groot_taza',carpeta: 'tazas',catalogoID: 9 },
-            { nombre: 'jason',carpeta: 'tazas',catalogoID: 10 },
-            { nombre: 'la_bella_y_la_bestia_tazita',carpeta: 'tazas',catalogoID: 11 },
-            { nombre: 'perro_policia',carpeta: 'tazas',catalogoID: 12 },
-            { nombre: 'sonic',carpeta: 'tazas',catalogoID: 13 },
-            { nombre: 'spiderman',carpeta: 'tazas',catalogoID: 14 },
-            { nombre: 'unknown',carpeta: 'tazas',catalogoID: 15 },
-            { nombre: 'batman', carpeta: 'coleccionables',catalogoID: 16 },
-            { nombre: 'et', carpeta: 'coleccionables',catalogoID: 17 },
-            { nombre: 'funko_jason' , carpeta: 'coleccionables',catalogoID: 18 },
-            { nombre: 'goku_black', carpeta: 'coleccionables',catalogoID: 19 },
-            { nombre: 'goku', carpeta: 'coleccionables',catalogoID: 20 },
-            { nombre: 'homero', carpeta: 'coleccionables' ,catalogoID: 21},
-            { nombre: 'ironman', carpeta: 'coleccionables',catalogoID: 22 },
-            { nombre: 'jocker', carpeta: 'coleccionables',catalogoID: 23 },
-            { nombre: 'kitana', carpeta: 'coleccionables' ,catalogoID: 24},
-            { nombre: 'rick_y_morty', carpeta: 'coleccionables' ,catalogoID: 25},
-            { nombre: 'Saint_Seiya', carpeta: 'coleccionables' ,catalogoID: 26},
-            { nombre: 'sub_zero', carpeta: 'coleccionables',catalogoID: 27 },
-            { nombre: 'terminator', carpeta: 'coleccionables',catalogoID: 28 },
-            { nombre: 'thanos', carpeta: 'coleccionables',catalogoID: 29 },
-            { nombre: 'unknown', carpeta: 'coleccionables',catalogoID: 30 },
-            { nombre: 'yoda', carpeta: 'coleccionables',catalogoID: 31 },
-            { nombre: 'copa_america', carpeta: 'decoracion',catalogoID: 32 },
-            { nombre: 'dragon_ball', carpeta: 'decoracion',catalogoID: 33 },
-            { nombre: 'gatos', carpeta: 'decoracion',catalogoID: 34 },
-            { nombre: 'groot_varios', carpeta: 'decoracion',catalogoID: 35 },
-            { nombre: 'groot', carpeta: 'decoracion',catalogoID: 36 },
-            { nombre: 'mortal_kombat_logo', carpeta: 'decoracion',catalogoID: 37 },
-            { nombre: 'batman', carpeta:'mates',catalogoID: 38 },
-            { nombre: 'bety_boop', carpeta:'mates',catalogoID: 39 },
-            { nombre: 'bob_esponja', carpeta:'mates',catalogoID: 40 },
-            { nombre: 'boca_juniors', carpeta:'mates',catalogoID: 41 },
-            { nombre: 'camion_de_bomberos', carpeta:'mates',catalogoID: 42 },
-            { nombre: 'chuki', carpeta:'mates',catalogoID: 43 },
-            { nombre: 'club_atletico_independiente', carpeta:'mates',catalogoID: 44 },
-            { nombre: 'darth_vader', carpeta:'mates',catalogoID: 45 },
-            { nombre: 'death_note_elle', carpeta:'mates',catalogoID: 46 },
-            { nombre: 'depredador', carpeta:'mates',catalogoID: 47 },
-            { nombre: 'eddie_iron_maiden', carpeta:'mates',catalogoID: 48 },
-            { nombre: 'esfera_del_dragon', carpeta:'mates',catalogoID: 49 },
-            { nombre: 'ford', carpeta:'mates',catalogoID: 50 },
-            { nombre: 'frankenstein', carpeta:'mates',catalogoID: 51 },
-            { nombre: 'frida', carpeta:'mates',catalogoID: 52 },
-            { nombre: 'garfield', carpeta:'mates',catalogoID: 53 },
-            { nombre: 'goku', carpeta:'mates',catalogoID: 54 },
-            { nombre: 'groot_mate', carpeta:'mates',catalogoID: 55 },
-            { nombre: 'harry_potter', carpeta:'mates',catalogoID: 56 },
-            { nombre: 'homero_hombre_pie', carpeta:'mates',catalogoID: 57 },
-            { nombre: 'indio_solari', carpeta:'mates',catalogoID: 58 },
-            { nombre: 'ironman', carpeta:'mates',catalogoID: 59 },
-            { nombre: 'jaison', carpeta:'mates',catalogoID: 60 },
-            { nombre: 'jocker', carpeta:'mates',catalogoID: 61 },
-            { nombre: 'joker_otro', carpeta:'mates',catalogoID: 62 },
-            { nombre: 'nestor_kirchner', carpeta:'mates',catalogoID: 63 },
-            { nombre: 'pablo_escobar', carpeta:'mates',catalogoID: 64 },
-            { nombre: 'perro', carpeta:'mates',catalogoID: 65 },
-            { nombre: 'piston', carpeta:'mates',catalogoID: 66 },
-            { nombre: 'playstation_mate', carpeta:'mates',catalogoID: 67 },
-            { nombre: 'presidente_alberto_fernandez', carpeta:'mates',catalogoID: 68 },
-            { nombre: 'racing_club', carpeta:'mates',catalogoID: 69 },
-            { nombre: 'stitch_cabeza', carpeta:'mates',catalogoID: 70 },
-            { nombre: 'stitch', carpeta:'mates',catalogoID: 71 },
-            { nombre: 'stitch2', carpeta:'mates',catalogoID: 72 },
-            { nombre: 'sub_zero_mate', carpeta:'mates',catalogoID: 73 },
-            { nombre: 'thor', carpeta:'mates',catalogoID: 74 },
-            { nombre: 'VW', carpeta:'mates',catalogoID: 75 }
+            { nombre: 'bob_esponja_taza', carpeta: 'tazas', catalogoID: 1 },
+            { nombre: 'boca_juniors_taza', carpeta: 'tazas', catalogoID: 2 },
+            { nombre: 'capitan_america', carpeta: 'tazas', catalogoID: 3 },
+            { nombre: 'chuky_taza', carpeta: 'tazas', catalogoID: 4 },
+            { nombre: 'deadpool', carpeta: 'tazas', catalogoID: 5 },
+            { nombre: 'esfera_del_dragon_taza', carpeta: 'tazas', catalogoID: 6 },
+            { nombre: 'feminista', carpeta: 'tazas', catalogoID: 7 },
+            { nombre: 'gauchito_taza', carpeta: 'tazas', catalogoID: 8 },
+            { nombre: 'groot_taza', carpeta: 'tazas', catalogoID: 9 },
+            { nombre: 'jason', carpeta: 'tazas', catalogoID: 10 },
+            { nombre: 'la_bella_y_la_bestia_tazita', carpeta: 'tazas', catalogoID: 11 },
+            { nombre: 'perro_policia', carpeta: 'tazas', catalogoID: 12 },
+            { nombre: 'sonic', carpeta: 'tazas', catalogoID: 13 },
+            { nombre: 'spiderman', carpeta: 'tazas', catalogoID: 14 },
+            { nombre: 'unknown', carpeta: 'tazas', catalogoID: 15 },
+            { nombre: 'batman', carpeta: 'coleccionables', catalogoID: 16 },
+            { nombre: 'et', carpeta: 'coleccionables', catalogoID: 17 },
+            { nombre: 'funko_jason', carpeta: 'coleccionables', catalogoID: 18 },
+            { nombre: 'goku_black', carpeta: 'coleccionables', catalogoID: 19 },
+            { nombre: 'goku', carpeta: 'coleccionables', catalogoID: 20 },
+            { nombre: 'homero', carpeta: 'coleccionables', catalogoID: 21 },
+            { nombre: 'ironman', carpeta: 'coleccionables', catalogoID: 22 },
+            { nombre: 'jocker', carpeta: 'coleccionables', catalogoID: 23 },
+            { nombre: 'kitana', carpeta: 'coleccionables', catalogoID: 24 },
+            { nombre: 'rick_y_morty', carpeta: 'coleccionables', catalogoID: 25 },
+            { nombre: 'Saint_Seiya', carpeta: 'coleccionables', catalogoID: 26 },
+            { nombre: 'sub_zero', carpeta: 'coleccionables', catalogoID: 27 },
+            { nombre: 'terminator', carpeta: 'coleccionables', catalogoID: 28 },
+            { nombre: 'thanos', carpeta: 'coleccionables', catalogoID: 29 },
+            { nombre: 'unknown', carpeta: 'coleccionables', catalogoID: 30 },
+            { nombre: 'yoda', carpeta: 'coleccionables', catalogoID: 31 },
+            { nombre: 'copa_america', carpeta: 'decoracion', catalogoID: 32 },
+            { nombre: 'dragon_ball', carpeta: 'decoracion', catalogoID: 33 },
+            { nombre: 'gatos', carpeta: 'decoracion', catalogoID: 34 },
+            { nombre: 'groot_varios', carpeta: 'decoracion', catalogoID: 35 },
+            { nombre: 'groot', carpeta: 'decoracion', catalogoID: 36 },
+            { nombre: 'mortal_kombat_logo', carpeta: 'decoracion', catalogoID: 37 },
+            { nombre: 'batman', carpeta: 'mates', catalogoID: 38 },
+            { nombre: 'bety_boop', carpeta: 'mates', catalogoID: 39 },
+            { nombre: 'bob_esponja', carpeta: 'mates', catalogoID: 40 },
+            { nombre: 'boca_juniors', carpeta: 'mates', catalogoID: 41 },
+            { nombre: 'camion_de_bomberos', carpeta: 'mates', catalogoID: 42 },
+            { nombre: 'chuki', carpeta: 'mates', catalogoID: 43 },
+            { nombre: 'club_atletico_independiente', carpeta: 'mates', catalogoID: 44 },
+            { nombre: 'darth_vader', carpeta: 'mates', catalogoID: 45 },
+            { nombre: 'death_note_elle', carpeta: 'mates', catalogoID: 46 },
+            { nombre: 'depredador', carpeta: 'mates', catalogoID: 47 },
+            { nombre: 'eddie_iron_maiden', carpeta: 'mates', catalogoID: 48 },
+            { nombre: 'esfera_del_dragon', carpeta: 'mates', catalogoID: 49 },
+            { nombre: 'ford', carpeta: 'mates', catalogoID: 50 },
+            { nombre: 'frankenstein', carpeta: 'mates', catalogoID: 51 },
+            { nombre: 'frida', carpeta: 'mates', catalogoID: 52 },
+            { nombre: 'garfield', carpeta: 'mates', catalogoID: 53 },
+            { nombre: 'goku', carpeta: 'mates', catalogoID: 54 },
+            { nombre: 'groot_mate', carpeta: 'mates', catalogoID: 55 },
+            { nombre: 'harry_potter', carpeta: 'mates', catalogoID: 56 },
+            { nombre: 'homero_hombre_pie', carpeta: 'mates', catalogoID: 57 },
+            { nombre: 'indio_solari', carpeta: 'mates', catalogoID: 58 },
+            { nombre: 'ironman', carpeta: 'mates', catalogoID: 59 },
+            { nombre: 'jaison', carpeta: 'mates', catalogoID: 60 },
+            { nombre: 'jocker', carpeta: 'mates', catalogoID: 61 },
+            { nombre: 'joker_otro', carpeta: 'mates', catalogoID: 62 },
+            { nombre: 'nestor_kirchner', carpeta: 'mates', catalogoID: 63 },
+            { nombre: 'pablo_escobar', carpeta: 'mates', catalogoID: 64 },
+            { nombre: 'perro', carpeta: 'mates', catalogoID: 65 },
+            { nombre: 'piston', carpeta: 'mates', catalogoID: 66 },
+            { nombre: 'playstation_mate', carpeta: 'mates', catalogoID: 67 },
+            { nombre: 'presidente_alberto_fernandez', carpeta: 'mates', catalogoID: 68 },
+            { nombre: 'racing_club', carpeta: 'mates', catalogoID: 69 },
+            { nombre: 'stitch_cabeza', carpeta: 'mates', catalogoID: 70 },
+            { nombre: 'stitch', carpeta: 'mates', catalogoID: 71 },
+            { nombre: 'stitch2', carpeta: 'mates', catalogoID: 72 },
+            { nombre: 'sub_zero_mate', carpeta: 'mates', catalogoID: 73 },
+            { nombre: 'thor', carpeta: 'mates', catalogoID: 74 },
+            { nombre: 'VW', carpeta: 'mates', catalogoID: 75 }
         ];
 
         const formulario = document.querySelector('#formulario');
@@ -111,7 +131,7 @@
 
             resultado.innerHTML = '';
 
-            let counter =0;
+            let counter = 0;
 
             const texto = formulario.value.toLowerCase();
             for (let producto of productos) {
@@ -120,7 +140,7 @@
                 if (nombre.indexOf(texto) !== -1) {
 
                     counter++;
-                    if(counter>=10){
+                    if (counter >= 10) {
                         break;
                     }
 
